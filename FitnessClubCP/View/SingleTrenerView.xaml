@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="FitnessClubCP.View.SingleTrenerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FitnessClubCP.View"
+             mc:Ignorable="d" 
+                        Height="auto" Width="946.6">
+    <Border CornerRadius="10" Padding="5" Background="White" Height="137" Margin="0,0,-0.6,0.4" BorderThickness="1" BorderBrush="Black">
+        <Grid>
+            <Label Content="{Binding Fullname}" HorizontalAlignment="Left" Margin="91,6,0,0" VerticalAlignment="Top"/>
+            <Label Content="Стаж(лет):" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top"/>
+            <Label Content="Возраст(лет):" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top"/>
+            <Label Content="Пол:" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top"/>
+            <Label Content="О себе:" HorizontalAlignment="Left" Margin="441,47,0,0" VerticalAlignment="Top" Width="51"/>
+            <Label Content="Рабочие дни:" HorizontalAlignment="Left" Margin="411,10,0,0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding About}" VerticalAlignment="Top" Margin="492,52,0,-0.2" Height="73" Width="362"/>
+            <Label Content="{Binding Days}" HorizontalAlignment="Left" Margin="494,11,-0.4,0" VerticalAlignment="Top" Width="444"/>
+            <Label Content="{Binding Sex}" HorizontalAlignment="Left" Margin="50,99,0,0" VerticalAlignment="Top"/>
+            <Label Content="{Binding Age}" HorizontalAlignment="Left" Margin="95,68,0,0" VerticalAlignment="Top"/>
+            <Label Content="{Binding Experience}" HorizontalAlignment="Left" Margin="74,37,0,0" VerticalAlignment="Top"/>
+            <Label Content="Полное имя:" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top"/>
+            <Label Content="Всего мест для клиентов:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="156,68,0,0" Width="148"/>
+            <Label Content="Свободных мест для клиентов:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="156,99,0,0" Width="184"/>
+            <Label Content="{Binding FreeCapacity}" HorizontalAlignment="Left" Margin="334,101,0,0" VerticalAlignment="Top"/>
+            <Label Content="{Binding Capacity}" HorizontalAlignment="Left" Margin="334,67,0,0" VerticalAlignment="Top"/>
+            <Button Content="Отзывы о&#xA; тренере" HorizontalAlignment="Left" Margin="854,80,0,0" VerticalAlignment="Top" Background="BlueViolet" Width="80" Command="{Binding ShowComments}"/>
+
+        </Grid>
+    </Border>
+</UserControl>

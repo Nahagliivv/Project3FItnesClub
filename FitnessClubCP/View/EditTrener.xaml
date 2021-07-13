@@ -1,0 +1,39 @@
+﻿<Window x:Class="FitnessClubCP.View.EditTrener"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessClubCP.View"
+        mc:Ignorable="d"
+        Title="Редактирование информации о тренере" Height="428.4" Width="452.825" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Добавить тренера" HorizontalAlignment="Left" Margin="12,88,0,0" VerticalAlignment="Top" Width="250"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="103,124,0,0" TextWrapping="Wrap" Text="{Binding Firstname, Mode=TwoWay}" VerticalAlignment="Top" Width="160" />
+        <Label Content="Имя:" HorizontalAlignment="Left" Margin="12,121,0,0" VerticalAlignment="Top"/>
+        <Label Content="Фамилия:" HorizontalAlignment="Left" Margin="12,158,0,0" VerticalAlignment="Top"/>
+        <Label Content="Стаж в годах:" HorizontalAlignment="Left" Margin="12,200,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="103,160,0,0" TextWrapping="Wrap" Text="{Binding Lastname, Mode=TwoWay}" VerticalAlignment="Top" Width="160"/>
+        <Label Content="Пол:" HorizontalAlignment="Left" Margin="15,233,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="23" Margin="102,236,0,0"  VerticalAlignment="Top" Width="160" Text="{Binding Sex, Mode=TwoWay}">
+            <TextBlock><Run Text="Муж."/></TextBlock>
+            <TextBlock><Run Text="Жен."/></TextBlock>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="103,200,0,0" TextWrapping="Wrap" Text="{Binding Experience, Mode=TwoWay}" VerticalAlignment="Top" Width="160" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Сохранить изменения" HorizontalAlignment="Left" Margin="15,362,0,0" VerticalAlignment="Top" Width="421" Command="{Binding Save}" />
+        <Label Content="О себе:" HorizontalAlignment="Left" Margin="15,301,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="103,304,0,0" TextWrapping="Wrap" Text="{Binding About, Mode=TwoWay}" VerticalAlignment="Top" Width="160"/>
+        <Label Content="Рабочие дни недели" HorizontalAlignment="Left" Margin="277,88,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Пн" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,127,0,0" IsChecked="{Binding Monday, Mode=TwoWay}"/>
+        <CheckBox Content="Вт" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,148,0,0" IsChecked="{Binding Tuesday, Mode=TwoWay}"/>
+        <CheckBox Content="Ср" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,168,0,0" IsChecked="{Binding Wednesday, Mode=TwoWay}"/>
+        <CheckBox Content="Чт" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,188,0,0" IsChecked="{Binding Thursday, Mode=TwoWay}"/>
+        <CheckBox Content="Пт" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,208,0,0" IsChecked="{Binding Friday, Mode=TwoWay}"/>
+        <CheckBox Content="Сб" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,227,0,0" IsChecked="{Binding Saturday, Mode=TwoWay}"/>
+        <CheckBox Content="Вс" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,247,0,0" IsChecked="{Binding Sunday, Mode=TwoWay}"/>
+        <Label Content="Возраст:" HorizontalAlignment="Left" Margin="12,270,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="103,270,0,0" TextWrapping="Wrap" Text="{Binding Age, Mode=TwoWay}" VerticalAlignment="Top" Width="160" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="145,331,0,0" TextWrapping="Wrap" Text="{Binding MaxClients, Mode=TwoWay}" VerticalAlignment="Top" Width="117" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Максимум клиентов:" HorizontalAlignment="Left" Margin="15,331,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

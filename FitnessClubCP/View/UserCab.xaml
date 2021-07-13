@@ -1,0 +1,35 @@
+﻿<Window x:Class="FitnessClubCP.View.UserCab"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessClubCP.View"
+        mc:Ignorable="d"
+     Title="" Height="720" Width="1280" WindowState="Maximized" MinHeight="720" MinWidth="1280" ResizeMode="NoResize" WindowStyle="None" Background="AliceBlue">
+    <Grid>
+        <ListBox HorizontalAlignment="Center" Height="auto" VerticalAlignment="Top" Width="980" ItemsSource="{Binding TrenerCollection}" SelectedItem="{Binding FocusTrener, Mode=TwoWay}" Margin="298,138,2,0" HorizontalContentAlignment="Center" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <local:SingleTrenerView></local:SingleTrenerView>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Отказаться от занятий" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Background="BlueViolet" Width="283" FontSize="20" Height="44" Command="{Binding DelTrener}"/>
+        <Button Content="На главную" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Background="BlueViolet" Width="283" FontSize="20" Height="44" Command="{Binding Home}"/>
+        <Label Content="К оплате(Руб):" HorizontalAlignment="Left" Margin="10,305,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="{Binding ToPay}" HorizontalAlignment="Left" Margin="154,305,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="{Binding UserName}" HorizontalAlignment="Left" Margin="10,254,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Вы пока не выбрали ни одного тренера для занятий" HorizontalAlignment="Left" Margin="617,156,0,0" VerticalAlignment="Top" Visibility="{Binding MessageStatus}"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" Width="auto">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/FITNES.jpg" 
+                    Stretch="Fill"  Opacity="0.2"></ImageBrush>
+            </Border.Background>
+            <Grid>
+                <Button Background="BlueViolet" Content="Выход" HorizontalAlignment="Right" Margin="0,7,60,0" VerticalAlignment="Top" Width="75"  Height="25" Padding="0,0,0,0" Foreground="Black" Command="{Binding Exit}" />
+                <Button Background="White" Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="23" BorderBrush="Black" Margin="0,7,5.6,0" Height="25" Padding="0,0,0,0" Command="{Binding ShDw}" Foreground="Black"/>
+            </Grid>
+        </Border>
+        <Label FontSize="30" Content="Тренеры, к которым вы записались" HorizontalAlignment="Center" Margin="496,88,282,0" VerticalAlignment="Top" Width="502"/>
+    </Grid>
+</Window>
